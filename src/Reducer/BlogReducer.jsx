@@ -1,7 +1,7 @@
 import { toast } from "react-toastify";
 import { createBlog, deleteBlog, readAllBlog, updateBlog } from "../Action/BlogAction";
 
-const { createSlice } = require("@reduxjs/toolkit");
+import { createSlice } from "@reduxjs/toolkit";
 
 
 // Initialize the State
@@ -19,23 +19,23 @@ const blogSlice = createSlice({
     extraReducers : (builder) => {
         builder
        .addCase(createBlog.fulfilled, (state, action) => {
-        // Add a new blog to the state array
-        console.log("Reducer Payload = ", action.payload)
-        return [...state, action.payload];
+            // Add a new blog to the state array
+            console.log("Reducer Payload = ", action.payload)
+            return [...state, action.payload];
        })
        .addCase(createBlog.rejected, (state, action) => {
-        // Handle the error case
-        toast.error("Error creating blog = ", action.error);
+            // Handle the error case
+            toast.error("Error creating blog = ", action.error);
        });
 
        builder
        .addCase(readAllBlog.fulfilled, (state, action) => {
-        // Add all the blogs to the state array
-        return [...action.payload];
+            // Add all the blogs to the state array
+            return [...action.payload];
        })
        .addCase(readAllBlog.rejected, (state, action) => {
-        // Handle the error case
-        toast.error("Error reading blogs = ", action.error);
+            // Handle the error case
+            toast.error("Error reading blogs = ", action.error);
        });
 
         builder
@@ -66,7 +66,7 @@ const blogSlice = createSlice({
             toast.error("Error updating blog = ", action.error);
         });
     }
-});
+})
 
 // Export the action creators
 const {reducer} = blogSlice;
