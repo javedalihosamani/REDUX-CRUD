@@ -30,7 +30,7 @@ export const deleteBlog = createAsyncThunk("deleteBlog", async (id) =>{
 });
 
 // TO Update a blog
-export const updateBlog = createAsyncThunk("updateBlog", async (blog, id) => {
+export const updateBlog = createAsyncThunk("updateBlog", async ({blog, id}) => {
     console.log("Updating Blog : ", blog, "ID : ", id);
     const res = await blogAPI.update(blog, id);
     return res.data;

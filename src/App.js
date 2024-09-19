@@ -5,6 +5,7 @@ import { ToastContainer } from "react-toastify";
 import Pnf from "./layout/Pnf";
 import Home from "./components/home/Home";
 import Create from "./components/create/Create";
+import Update from "./components/update/Update";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path={``} element={<Home />} />
         <Route path={`/home`} element={<Home />} />
         <Route path={`/create`} element={<Create />} />
+        <Route path={`/update/:id`} element={<Update />} />
         <Route path={`/*`} element={<Pnf />} />
       </Routes>
       <Footer />
