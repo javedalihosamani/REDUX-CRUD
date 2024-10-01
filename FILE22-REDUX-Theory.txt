@@ -1,0 +1,36 @@
+WHAT IS REDUX?
+
+    REDUX IS A PREDICTABLE STATE CONTAINER FOR JAVASCRIPT APPS.
+        - It is for JAVASCRIPT APPS.
+        - It is a STATE CONTAINER.
+        - It is predictable.
+    Manage the state of your application in a predictable way, Redux can help you.
+
+        => REDUX IS FOR JAVASCRIPT APPLICATIONS.
+            - Redux is not tied to REACT.
+            - Cab be used with React, Angular, Vue or even vanilla JAVASCRIPT.
+            - REDUX IS A LIBRARY for JAVASCRIPT APPLICATIONS.
+
+        => REDUX IS A STATE CONTAINER.
+            - REDUX stores the state of your APPLICATIONS.
+                - Consider a REACT APP - STATE of a component.
+                - Example : state = {userName:"", password:"", submitting: false}
+            - REDUX will store and manage the application state.
+
+        => REDUX IS A PREDICTABLE.
+            - Predictable in what why?
+                - REDUX is a state container.
+                - The state of application can change.
+                - Example : todo list app - item(pending) - item(completed)
+                - In REDUX, all state transitions are explicit and it is possible to keep track of them.
+                - The changes to your application's state become predictable.
+
+REACT + REDUX?
+    1) WHY WOULD WE WANT TO USE REDUX IN A REACT APPLICATION?
+        - Components in REACT have their own state.
+    2) Why do we need another tool to help manage that state?
+        - Because in REACT, state and props works from parent to child and REDUX will create a common state for all Components.
+    3) Do we really have a problem?
+        - React Context - Prevents prop drilling.
+        - If you are familiar with hooks, you might also thinking useContext + useReducer?. But REDUX 1.0 introduced in August 2015.
+    
